@@ -1,0 +1,7 @@
+name: 'Chat Module'
+type: module
+description: 'A simple chat module for Drupal 10.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:node

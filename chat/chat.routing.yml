@@ -1,0 +1,7 @@
+chat.form:
+  path: '/chat'
+  defaults:
+    _form: '\Drupal\chat\Form\ChatForm'
+    _title: 'Chat with Anyone'
+  requirements:
+    _permission: 'access content'
