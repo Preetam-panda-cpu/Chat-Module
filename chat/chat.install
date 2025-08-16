@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Install file for Chat module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function chat_schema() {
+  $schema['chat_messages'] = [
+    'description' => 'Stores chat messages.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'message' => [
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
